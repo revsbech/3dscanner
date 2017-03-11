@@ -15,13 +15,17 @@ class ViewController: NSViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func onL1Toggle(sender: AnyObject) {
+        print("Toggle");
+    }
 
     override var representedObject: AnyObject? {
         didSet {
         // Update the view, if already loaded.
         }
     }
-
+    
 
 }
 
