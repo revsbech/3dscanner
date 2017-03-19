@@ -121,26 +121,16 @@ class ViewController: NSViewController, ORSSerialPortDelegate  {
         self.consoleOutput.appendLine("Serial port closed");
         self.connectionString.stringValue = "Not connected";
     }
-    
-    func serialPort(serialPort: ORSSerialPort, didReceive data: NSData) {
-        print("Incoming!!!!");
-        /*
-        if let string = NSString(data: data, encoding: String.Encoding.utf8.rawValue) {
-            self.serialOutput.textStorage?.mutableString.append(string as String)
-            self.serialOutput.needsDisplay = true
-        }
-*/
+    func serialPort(serialPort: ORSSerialPort, didReceiveData data: NSData) {
         let st = NSString(data: data, encoding: NSUTF8StringEncoding);
-        print(st);
-        consoleOutput.appendLine(String(st));
+        consoleOutput.appendLine(String(st!));
     }
     
     func serialPortWasRemovedFromSystem(serialPort: ORSSerialPort) {
         self.serialPort = nil
         self.connectionString.stringValue = "Not connected";
     }
-    
-    
+
     func serialPort(serialPort: ORSSerialPort, didEncounterError error: NSError) {
         consoleOutput.appendLine(String(error));
         print("SerialPort \(serialPort) encountered an error: \(error)")
@@ -153,7 +143,6 @@ class ViewController: NSViewController, ORSSerialPortDelegate  {
     func serialPort(serialPort: ORSSerialPort, requestDidTimeout request: ORSSerialRequest) {
         self.consoleOutput.appendLine("timeout");
     }
-
 }
 
 extension NSTextView {
