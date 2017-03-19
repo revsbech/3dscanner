@@ -13,6 +13,7 @@
 		6C2333011E74A38D00604994 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C2332FF1E74A38D00604994 /* Main.storyboard */; };
 		6C23330C1E74A38D00604994 /* ScannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C23330B1E74A38D00604994 /* ScannerTests.swift */; };
 		6C2333171E74A38D00604994 /* ScannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2333161E74A38D00604994 /* ScannerUITests.swift */; };
+		6CE6F5F01E74AE8000E145B8 /* ORSSerial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CE6F5ED1E74AE2D00E145B8 /* ORSSerial.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +31,27 @@
 			remoteGlobalIDString = 6C2332F51E74A38D00604994;
 			remoteInfo = Scanner;
 		};
+		6CE6F5EC1E74AE2D00E145B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6CE6F5E71E74AE2D00E145B8 /* ORSSerialPort.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9DCA89121A2BB106009285EB;
+			remoteInfo = ORSSerial;
+		};
+		6CE6F5EE1E74AE2D00E145B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6CE6F5E71E74AE2D00E145B8 /* ORSSerialPort.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9D7472131B6D7767002D8B10;
+			remoteInfo = "ORSSerialPort Tests";
+		};
+		6CE6F5F21E753C5600E145B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6CE6F5E71E74AE2D00E145B8 /* ORSSerialPort.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9DCA89111A2BB106009285EB;
+			remoteInfo = ORSSerial;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +67,8 @@
 		6C2333121E74A38D00604994 /* ScannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScannerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C2333161E74A38D00604994 /* ScannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerUITests.swift; sourceTree = "<group>"; };
 		6C2333181E74A38D00604994 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CE6F5E71E74AE2D00E145B8 /* ORSSerialPort.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ORSSerialPort.xcodeproj; path = "Frameworks/ORSSerialPort/Framework Project/ORSSerialPort.xcodeproj"; sourceTree = "<group>"; };
+		6CE6F5F11E74AFF000E145B8 /* SwiftSerial-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftSerial-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CE6F5F01E74AE8000E145B8 /* ORSSerial.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +104,7 @@
 				6C23330A1E74A38D00604994 /* ScannerTests */,
 				6C2333151E74A38D00604994 /* ScannerUITests */,
 				6C2332F71E74A38D00604994 /* Products */,
+				6CE6F5E71E74AE2D00E145B8 /* ORSSerialPort.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +126,7 @@
 				6C2332FD1E74A38D00604994 /* Assets.xcassets */,
 				6C2332FF1E74A38D00604994 /* Main.storyboard */,
 				6C2333021E74A38D00604994 /* Info.plist */,
+				6CE6F5F11E74AFF000E145B8 /* SwiftSerial-Bridging-Header.h */,
 			);
 			path = Scanner;
 			sourceTree = "<group>";
@@ -122,6 +149,15 @@
 			path = ScannerUITests;
 			sourceTree = "<group>";
 		};
+		6CE6F5E81E74AE2D00E145B8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6CE6F5ED1E74AE2D00E145B8 /* ORSSerial.framework */,
+				6CE6F5EF1E74AE2D00E145B8 /* ORSSerialPort Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -136,6 +172,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				6CE6F5F31E753C5600E145B8 /* PBXTargetDependency */,
 			);
 			name = Scanner;
 			productName = Scanner;
@@ -212,6 +249,12 @@
 			mainGroup = 6C2332ED1E74A38D00604994;
 			productRefGroup = 6C2332F71E74A38D00604994 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 6CE6F5E81E74AE2D00E145B8 /* Products */;
+					ProjectRef = 6CE6F5E71E74AE2D00E145B8 /* ORSSerialPort.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				6C2332F51E74A38D00604994 /* Scanner */,
@@ -220,6 +263,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		6CE6F5ED1E74AE2D00E145B8 /* ORSSerial.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ORSSerial.framework;
+			remoteRef = 6CE6F5EC1E74AE2D00E145B8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6CE6F5EF1E74AE2D00E145B8 /* ORSSerialPort Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "ORSSerialPort Tests.xctest";
+			remoteRef = 6CE6F5EE1E74AE2D00E145B8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		6C2332F41E74A38D00604994 /* Resources */ = {
@@ -285,6 +345,11 @@
 			isa = PBXTargetDependency;
 			target = 6C2332F51E74A38D00604994 /* Scanner */;
 			targetProxy = 6C2333131E74A38D00604994 /* PBXContainerItemProxy */;
+		};
+		6CE6F5F31E753C5600E145B8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ORSSerial;
+			targetProxy = 6CE6F5F21E753C5600E145B8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -389,6 +454,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Revsbech.Scanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Scanner/SwiftSerial-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -401,6 +467,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Revsbech.Scanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Scanner/SwiftSerial-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -475,6 +542,7 @@
 				6C23331D1E74A38D00604994 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6C23331E1E74A38D00604994 /* Build configuration list for PBXNativeTarget "ScannerTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +551,7 @@
 				6C2333201E74A38D00604994 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6C2333211E74A38D00604994 /* Build configuration list for PBXNativeTarget "ScannerUITests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +560,7 @@
 				6C2333231E74A38D00604994 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
